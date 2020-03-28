@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamDetailMain"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarteam"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary"
+        android:fadingEdge="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:id="@+id/teamPicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/teamPicture"
+                android:padding="0dp"
+                android:layout_marginStart="10dp"
+
+                />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subscribe"
+                android:layout_alignBaseline="@id/teamName"
+                android:layout_toRightOf="@id/teamName"
+                android:layout_marginLeft="20dp"
+
+                android:background="@color/colorButton"
+                />
+
+            <TextView
+                android:id="@+id/teamName"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@id/teamPicture"
+                android:text=""
+                android:textColor="@color/colortabtext"
+                android:textSize="17sp"
+
+                />
+
+        </RelativeLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fadingEdge="horizontal"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colortabindicator"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/colortabtext" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viepagerID">
+
+    </android.support.v4.view.ViewPager>
+
+
+
+</LinearLayout>

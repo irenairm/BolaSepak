@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetail">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="02 Februari 2019"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weather_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Cuaca tidak tersedia"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_name_text" />
+
+        <ImageView
+            android:id="@+id/home_logo_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/home_score_text"
+            app:layout_constraintTop_toBottomOf="@id/date_text"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/home_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tim A"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintLeft_toLeftOf="@id/home_logo_image"
+            app:layout_constraintRight_toRightOf="@id/home_logo_image"
+            app:layout_constraintTop_toBottomOf="@id/home_logo_image" />
+
+        <TextView
+            android:id="@+id/home_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="-"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/home_logo_image"
+            app:layout_constraintRight_toLeftOf="@id/versus_text"
+            app:layout_constraintTop_toTopOf="@id/home_logo_image" />
+
+        <TextView
+            android:id="@+id/versus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="vs"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintBottom_toBottomOf="@id/home_logo_image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/home_score_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/home_logo_image" />
+
+        <TextView
+            android:id="@+id/away_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="-"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/away_logo_image"
+            app:layout_constraintLeft_toRightOf="@id/versus_text"
+            app:layout_constraintTop_toTopOf="@id/away_logo_image" />
+
+        <ImageView
+            android:id="@+id/away_logo_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintLeft_toRightOf="@id/away_score_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_text"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/away_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tim B"
+            android:textSize="@dimen/title_size"
+            app:layout_constraintLeft_toLeftOf="@id/away_logo_image"
+            app:layout_constraintRight_toRightOf="@id/away_logo_image"
+            app:layout_constraintTop_toBottomOf="@id/away_logo_image" />
+
+        <TextView
+            android:id="@+id/shots_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="SHOTS"
+            android:textSize="@dimen/std_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_name_text" />
+
+        <TextView
+            android:id="@+id/home_shots_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="-"
+            android:textSize="@dimen/std_size"
+            app:layout_constraintLeft_toLeftOf="@id/home_name_text"
+            app:layout_constraintRight_toRightOf="@id/home_name_text"
+            app:layout_constraintTop_toBottomOf="@id/home_name_text" />
+
+        <TextView
+            android:id="@+id/away_shots_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="-"
+            android:textSize="@dimen/std_size"
+            app:layout_constraintLeft_toLeftOf="@id/away_name_text"
+            app:layout_constraintRight_toRightOf="@id/away_name_text"
+            app:layout_constraintTop_toBottomOf="@id/away_name_text" />
+
+        <TextView
+            android:id="@+id/goals_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="GOALS"
+            android:textSize="@dimen/std_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shots_text" />
+
+        <TextView
+            android:id="@+id/home_goal_details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-"
+            android:textSize="@dimen/std_size"
+            app:layout_constraintLeft_toLeftOf="@id/home_name_text"
+            app:layout_constraintRight_toRightOf="@id/home_name_text"
+            app:layout_constraintTop_toBottomOf="@id/home_shots_text" />
+
+        <TextView
+            android:id="@+id/away_goal_details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-"
+            android:textSize="@dimen/std_size"
+            app:layout_constraintLeft_toLeftOf="@id/away_name_text"
+            app:layout_constraintRight_toRightOf="@id/away_name_text"
+            app:layout_constraintTop_toBottomOf="@id/away_shots_text" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
